@@ -12,9 +12,9 @@ Applied UI changes:
 - Stage/banner fragments such as “Habits!” were removed from the source art.
 - Locked character silhouettes are pre-rendered PNG resources: character outline + dark gray fill + centered question mark.
 - No per-pixel silhouette generation is performed at app startup.
-- Collection locked cards no longer show the redundant “실루엣” label/button.
+- Collection locked cards no longer show the redundant “silhouette” label/button.
 - Collection transition slides left; returning home slides right.
-- Footer: “v6.6 · 만든이 김지백”.
+- Footer: “v6.6; author credit in the original UI”.
 - Reset button remains removed.
 
 Important:
