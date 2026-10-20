@@ -1,0 +1,46 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.openai.routinequest"
+    android:versionCode="67"
+    android:versionName="6.7">
+
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30" />
+
+    <application
+        android:allowBackup="true"
+        android:label="나의 루틴 모험"
+        android:icon="@drawable/app_icon"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".CollectionActivity" android:exported="true" />
+
+        <receiver
+            android:name=".RoutineWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.openai.routinequest.ACTION_MARK_TODAY" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <provider
+            android:name=".ShareFileProvider"
+            android:authorities="com.openai.routinequest.share"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+    </application>
+</manifest>

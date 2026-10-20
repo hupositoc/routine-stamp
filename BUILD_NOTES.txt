@@ -1,0 +1,22 @@
+RoutineStamp v6.6 clean source
+
+Package: com.openai.routinequest
+Version: 6.6 (versionCode 66)
+Minimum SDK: 23
+Target SDK: 30
+
+Applied UI changes:
+- Today check / Share buttons use the same 48dp height and both include icons.
+- Today button changes to the completed state after today's check.
+- Growth image uses FIT_CENTER / adjustViewBounds and more breathing room to avoid cropping.
+- Stage/banner fragments such as “Habits!” were removed from the source art.
+- Locked character silhouettes are pre-rendered PNG resources: character outline + dark gray fill + centered question mark.
+- No per-pixel silhouette generation is performed at app startup.
+- Collection locked cards no longer show the redundant “실루엣” label/button.
+- Collection transition slides left; returning home slides right.
+- Footer: “v6.6 · 만든이 김지백”.
+- Reset button remains removed.
+
+Important:
+This clean source is the maintainable source baseline for future normal Android builds.
+The delivered APK was packaged from the known-working v6.4 runtime base with a separately validated compatibility patch because the current execution container does not include the full Android SDK build toolchain. The stable signing certificate is preserved so it can update v6.4.
